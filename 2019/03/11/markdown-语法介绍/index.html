@@ -17,7 +17,7 @@
 <meta property="og:description" content="常用语法介绍1▸标题使用 #,可以表示 1-6级 标题(下记灰色) 123456# 第一级标题 `&amp;lt;h1&amp;gt;` ## 第二级标题 `&amp;lt;h2&amp;gt;` ### 第三级标题 `&amp;lt;h3&amp;gt;` #### 第二四级标题 `&amp;lt;h4&amp;gt;` ##### 第五级标题 `&amp;lt;h5&amp;gt;` ###### 第六级标题 `&amp;lt;h6&amp;gt;` 2▸段落3▸ 区块引用12345&amp;g">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://surq.github.io/images/aa.png">
-<meta property="og:updated_time" content="2019-03-13T04:05:33.172Z">
+<meta property="og:updated_time" content="2019-03-13T04:17:59.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown 语法介绍">
 <meta name="twitter:description" content="常用语法介绍1▸标题使用 #,可以表示 1-6级 标题(下记灰色) 123456# 第一级标题 `&amp;lt;h1&amp;gt;` ## 第二级标题 `&amp;lt;h2&amp;gt;` ### 第三级标题 `&amp;lt;h3&amp;gt;` #### 第二四级标题 `&amp;lt;h4&amp;gt;` ##### 第五级标题 `&amp;lt;h5&amp;gt;` ###### 第六级标题 `&amp;lt;h6&amp;gt;` 2▸段落3▸ 区块引用12345&amp;g">
@@ -223,52 +223,38 @@
 </blockquote>
 </blockquote>
 <h5 id="4▸-代码区块"><a href="#4▸-代码区块" class="headerlink" title="4▸ 代码区块"></a>4▸ 代码区块</h5><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">【```scala】回车即可出现scala代码块。可以把[```]先建代码区块，后选语言。</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 已完成更新的scheme文件夹，升序排序</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getUpdateFolderList</span></span>(updatePath: <span class="type">String</span>) = <span class="type">HDFSFileSytem</span>.listStatus(<span class="keyword">new</span> <span class="type">Path</span>(updatePath))</span><br><span class="line">    .filter(p =&gt; <span class="type">HDFSFileSytem</span>.exists(<span class="keyword">new</span> <span class="type">Path</span>(p.getPath.toString + <span class="string">"/_SUCCESS"</span>)))</span><br><span class="line">    .map(_.getPath.toString).sortWith((a, b) =&gt; a &lt; b)</span><br></pre></td></tr></table></figure>
-<h5 id="5▸-编辑"><a href="#5▸-编辑" class="headerlink" title="5▸ 编辑"></a>5▸ 编辑</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">斜体:      *斜体*</span><br><span class="line">粗体:      **加粗**</span><br><span class="line">斜体+粗体： ***斜体+粗体***</span><br><span class="line">删除线:     ~~删除线~~</span><br><span class="line">------------------------------</span><br><span class="line">复选框 </span><br><span class="line">未选中状态:     -+空格+[+空格+] </span><br><span class="line">选中状态:       -+空格+[+x+]</span><br><span class="line">(⚠️在行首输入否则不生效)</span><br><span class="line">------------------------------</span><br><span class="line">反斜杠： 相当于反转义作用。使符号成为普通符号。</span><br><span class="line">标签符号：用两个``表示，起到标签作用。</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>复选框 </p>
+<h5 id="5▸-编辑"><a href="#5▸-编辑" class="headerlink" title="5▸ 编辑"></a>5▸ 编辑</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">斜体:      *斜体*</span><br><span class="line">粗体:      **加粗**</span><br><span class="line">斜体+粗体： ***斜体+粗体***</span><br><span class="line">删除线:     ~~删除线~~</span><br><span class="line">注解:      [^文本]</span><br><span class="line">------------------------------</span><br><span class="line">复选框 </span><br><span class="line">未选中状态:     -+空格+[+空格+] </span><br><span class="line">选中状态:       -+空格+[+x+]</span><br><span class="line">(⚠️在行首输入否则不生效)</span><br><span class="line">------------------------------</span><br><span class="line">反斜杠： 相当于反转义作用。使符号成为普通符号。</span><br><span class="line">标签符号：用两个``表示，起到标签作用。</span><br></pre></td></tr></table></figure>
+<p>复选框 </p>
 <ul>
 <li style="list-style: none"><input type="checkbox"> 未选中状态:<code>-+空格+[+空格+]</code>      </li>
 <li style="list-style: none"><input type="checkbox" checked> 选中状态：<code>-+空格+[+x+]</code> </li>
 </ul>
-</li>
-<li><p>脚注:</p>
-<p>脚注<a href="这就是一个脚注">^注解1</a> :注意在本页的最下面有解释的区域。</p>
-</li>
-<li><p>反斜杠</p>
-<p><code>\/</code> 表示反斜杠</p>
-</li>
-<li><p>标签符号</p>
-<p>示例如下：</p>
-<p>例如：<code>标签</code></p>
-</li>
-</ol>
+<p>脚注:</p>
+<p>​    脚注<a href="这就是一个脚注">^注解1</a> :注意在本页的最下面有解释的区域。</p>
+<p>反斜杠</p>
+<p>​    <code>\/</code> 表示反斜杠</p>
+<p>标签符号</p>
+<p>​    示例如下：</p>
+<p>​    例如：<code>标签</code></p>
 <h5 id="6▸-列表"><a href="#6▸-列表" class="headerlink" title="6▸ 列表"></a>6▸ 列表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1､ - 或 + 或* 自由组合使用，最多三层。</span><br><span class="line">2､ 数字+点+空格。</span><br><span class="line">注意：标记后面最少有一个_空格_或_制表符_。</span><br><span class="line">字体颜色：&lt;font color =&quot;red&quot;&gt;第一:&lt;/font&gt;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>无序列表示例如下：</p>
 <ul>
-<li><font color="red">第一</font>
-
-<ul>
-<li><font color="blue">第二</font>
-</li>
-<li><font color="green">第三</font>
+<li>无序列表示例如下：<ul>
+<li><font color="red">第1</font></li>
+<li><font color="blue"> 第2</font><br>+ <font color="green">第2.1</font>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-<li><p>有序列表示例：</p>
-<p>第一条</p>
-<ol>
-<li><font color="blue">每一条第一行</font></li>
-<li><font color="blue">每一条第二行</font>
+<ul>
+<li>有序列表示例：<ol>
+<li>第一条</li>
+<li><font color="blue">每二条</font><br>1. <font color="blue">每二条第一行</font>
 
 </li>
 </ol>
 </li>
-</ol>
+</ul>
 <h5 id="7▸-分割线"><a href="#7▸-分割线" class="headerlink" title="7▸ 分割线"></a>7▸ 分割线</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">分割线最常使用就是三个或以上的 【*】、【-】 、【_】。</span><br></pre></td></tr></table></figure>
-<hr>
 <h5 id="8▸-链接"><a href="#8▸-链接" class="headerlink" title="8▸ 链接"></a>8▸ 链接</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">链接可以由两种形式生成，行内式 和 参考式。</span><br><span class="line">行内式:</span><br><span class="line">[链接文字备注](URL地址) 注意⚠️：[]、()必须为英文的。</span><br><span class="line">参考式：</span><br><span class="line">[GitHub][1]</span><br><span class="line">[1]:http://github.com</span><br></pre></td></tr></table></figure>
 <p>示例如下：</p>
 <ul>
