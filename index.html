@@ -274,11 +274,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="常用语法介绍"><a href="#常用语法介绍" class="headerlink" title="常用语法介绍"></a>常用语法介绍</h4><p>#####1▸标题</p>
-<p>使用 <strong><code>#</code></strong>,可以表示 <strong>1-6级</strong> 标题(下记灰色)</p>
+        <h4 id="常用语法介绍"><a href="#常用语法介绍" class="headerlink" title="常用语法介绍"></a>常用语法介绍</h4><h5 id="1▸标题"><a href="#1▸标题" class="headerlink" title="1▸标题"></a>1▸标题</h5><p>使用 <strong><code>#</code></strong>,可以表示 <strong>1-6级</strong> 标题(下记灰色)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 第一级标题 `&lt;h1&gt;` </span><br><span class="line">## 第二级标题 `&lt;h2&gt;` </span><br><span class="line">### 第三级标题 `&lt;h3&gt;` </span><br><span class="line">#### 第二四级标题 `&lt;h4&gt;` </span><br><span class="line">##### 第五级标题 `&lt;h5&gt;` </span><br><span class="line">###### 第六级标题 `&lt;h6&gt;`</span><br></pre></td></tr></table></figure>
-<h5 id="2▸段落"><a href="#2▸段落" class="headerlink" title="2▸段落"></a>2▸段落</h5><p>#####3▸ 区块引用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 第一层用`&gt;`</span><br><span class="line">&gt; &gt; 二层嵌套引用`&gt;&gt;`</span><br><span class="line">&gt; &gt; &gt; 三层嵌套引用`&gt;&gt;&gt;`</span><br><span class="line">&gt; &gt; &gt; &gt; 四层嵌套引用`&gt;&gt;&gt;&gt;`可以一直`&gt;`嵌套引用下去。</span><br><span class="line">回车是向前层跳出。</span><br></pre></td></tr></table></figure>
+<h5 id="2▸段落"><a href="#2▸段落" class="headerlink" title="2▸段落"></a>2▸段落</h5><h5 id="3▸-区块引用"><a href="#3▸-区块引用" class="headerlink" title="3▸ 区块引用"></a>3▸ 区块引用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 第一层用`&gt;`</span><br><span class="line">&gt; &gt; 二层嵌套引用`&gt;&gt;`</span><br><span class="line">&gt; &gt; &gt; 三层嵌套引用`&gt;&gt;&gt;`</span><br><span class="line">&gt; &gt; &gt; &gt; 四层嵌套引用`&gt;&gt;&gt;&gt;`可以一直`&gt;`嵌套引用下去。</span><br><span class="line">回车是向前层跳出。</span><br></pre></td></tr></table></figure>
 <p>示例如下：</p>
 <blockquote>
 <p>每一层用<code>&gt;</code></p>
@@ -305,10 +303,8 @@
 </blockquote>
 </blockquote>
 </blockquote>
-<p>#####4▸ 代码区块</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">【```scala】回车即可出现scala代码块。可以把[```]先建代码区块，后选语言。</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 已完成更新的scheme文件夹，升序排序</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getUpdateFolderList</span></span>(updatePath: <span class="type">String</span>) = <span class="type">HDFSFileSytem</span>.listStatus(<span class="keyword">new</span> <span class="type">Path</span>(updatePath))</span><br><span class="line">    .filter(p =&gt; <span class="type">HDFSFileSytem</span>.exists(<span class="keyword">new</span> <span class="type">Path</span>(p.getPath.toString + <span class="string">"/_SUCCESS"</span>)))</span><br><span class="line">    .map(_.getPath.toString).sortWith((a, b) =&gt; a &lt; b)</span><br></pre></td></tr></table></figure>
-<p>#####5▸ 编辑</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">斜体:      *斜体*</span><br><span class="line">粗体:      **加粗**</span><br><span class="line">斜体+粗体： ***斜体+粗体***</span><br><span class="line">删除线:     ~~删除线~~</span><br><span class="line">------------------------------</span><br><span class="line">复选框 </span><br><span class="line">未选中状态:     -+空格+[+空格+] </span><br><span class="line">选中状态:       -+空格+[+x+]</span><br><span class="line">(⚠️在行首输入否则不生效)</span><br><span class="line">------------------------------</span><br><span class="line">反斜杠： 相当于反转义作用。使符号成为普通符号。</span><br><span class="line">标签符号：用两个``表示，起到标签作用。</span><br></pre></td></tr></table></figure>
+<h5 id="4▸-代码区块"><a href="#4▸-代码区块" class="headerlink" title="4▸ 代码区块"></a>4▸ 代码区块</h5><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">【```scala】回车即可出现scala代码块。可以把[```]先建代码区块，后选语言。</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 已完成更新的scheme文件夹，升序排序</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getUpdateFolderList</span></span>(updatePath: <span class="type">String</span>) = <span class="type">HDFSFileSytem</span>.listStatus(<span class="keyword">new</span> <span class="type">Path</span>(updatePath))</span><br><span class="line">    .filter(p =&gt; <span class="type">HDFSFileSytem</span>.exists(<span class="keyword">new</span> <span class="type">Path</span>(p.getPath.toString + <span class="string">"/_SUCCESS"</span>)))</span><br><span class="line">    .map(_.getPath.toString).sortWith((a, b) =&gt; a &lt; b)</span><br></pre></td></tr></table></figure>
+<h5 id="5▸-编辑"><a href="#5▸-编辑" class="headerlink" title="5▸ 编辑"></a>5▸ 编辑</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">斜体:      *斜体*</span><br><span class="line">粗体:      **加粗**</span><br><span class="line">斜体+粗体： ***斜体+粗体***</span><br><span class="line">删除线:     ~~删除线~~</span><br><span class="line">------------------------------</span><br><span class="line">复选框 </span><br><span class="line">未选中状态:     -+空格+[+空格+] </span><br><span class="line">选中状态:       -+空格+[+x+]</span><br><span class="line">(⚠️在行首输入否则不生效)</span><br><span class="line">------------------------------</span><br><span class="line">反斜杠： 相当于反转义作用。使符号成为普通符号。</span><br><span class="line">标签符号：用两个``表示，起到标签作用。</span><br></pre></td></tr></table></figure>
 <ol>
 <li><p>复选框 </p>
 <ul>
@@ -327,8 +323,7 @@
 <p>例如：<code>标签</code></p>
 </li>
 </ol>
-<p>#####6▸ 列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1､ - 或 + 或* 自由组合使用，最多三层。</span><br><span class="line">2､ 数字+点+空格。</span><br><span class="line">注意：标记后面最少有一个_空格_或_制表符_。</span><br><span class="line">字体颜色：&lt;font color =&quot;red&quot;&gt;第一:&lt;/font&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="6▸-列表"><a href="#6▸-列表" class="headerlink" title="6▸ 列表"></a>6▸ 列表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1､ - 或 + 或* 自由组合使用，最多三层。</span><br><span class="line">2､ 数字+点+空格。</span><br><span class="line">注意：标记后面最少有一个_空格_或_制表符_。</span><br><span class="line">字体颜色：&lt;font color =&quot;red&quot;&gt;第一:&lt;/font&gt;</span><br></pre></td></tr></table></figure>
 <ol>
 <li><p>无序列表示例如下：</p>
 <ul>
@@ -353,12 +348,9 @@
 </ol>
 </li>
 </ol>
-<p>#####7▸ 分割线</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">分割线最常使用就是三个或以上的 【*】、【-】 、【_】。</span><br></pre></td></tr></table></figure>
+<h5 id="7▸-分割线"><a href="#7▸-分割线" class="headerlink" title="7▸ 分割线"></a>7▸ 分割线</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">分割线最常使用就是三个或以上的 【*】、【-】 、【_】。</span><br></pre></td></tr></table></figure>
 <hr>
-<hr>
-<p>#####8▸ 链接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">链接可以由两种形式生成，行内式 和 参考式。</span><br><span class="line">行内式:</span><br><span class="line">[链接文字备注](URL地址) 注意⚠️：[]、()必须为英文的。</span><br><span class="line">参考式：</span><br><span class="line">[GitHub][1]</span><br><span class="line">[1]:http://github.com</span><br></pre></td></tr></table></figure>
+<h5 id="8▸-链接"><a href="#8▸-链接" class="headerlink" title="8▸ 链接"></a>8▸ 链接</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">链接可以由两种形式生成，行内式 和 参考式。</span><br><span class="line">行内式:</span><br><span class="line">[链接文字备注](URL地址) 注意⚠️：[]、()必须为英文的。</span><br><span class="line">参考式：</span><br><span class="line">[GitHub][1]</span><br><span class="line">[1]:http://github.com</span><br></pre></td></tr></table></figure>
 <p>示例如下：</p>
 <ul>
 <li><p>行内式： <a href="www.baidu.com">行内式</a></p>
@@ -371,8 +363,7 @@
 </ul>
 </li>
 </ul>
-<p>#####9▸ 图片</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">添加图片形式和链接相似，只需要在链接的基础上前方加一个 ！号。</span><br><span class="line">格式：</span><br><span class="line">![图片备注](URL地址) 注意⚠️：[]、()必须为英文的。</span><br></pre></td></tr></table></figure>
+<h5 id="9▸-图片"><a href="#9▸-图片" class="headerlink" title="9▸ 图片"></a>9▸ 图片</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">添加图片形式和链接相似，只需要在链接的基础上前方加一个 ！号。</span><br><span class="line">格式：</span><br><span class="line">![图片备注](URL地址) 注意⚠️：[]、()必须为英文的。</span><br></pre></td></tr></table></figure>
 <p>示例如下：</p>
 <p><img src="/images/aa.png" alt="surq"></p>
 <h5 id="10▸-表格"><a href="#10▸-表格" class="headerlink" title="10▸ 表格"></a>10▸ 表格</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">表头字段间用&quot;|&quot;隔开。然后回车即可。</span><br><span class="line">例如：</span><br><span class="line">|第一格表头 | 第二格表头|</span><br></pre></td></tr></table></figure>
@@ -395,11 +386,9 @@
 </tr>
 </tbody>
 </table>
-<p>#####11▸ 流程图</p>
+<h5 id="11▸-流程图"><a href="#11▸-流程图" class="headerlink" title="11▸ 流程图"></a>11▸ 流程图</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">e=&gt;end</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">e=&gt;end</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">e=&gt;end</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
-<p>#####▸ 自动生成目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">自动生成目录的代码为：[TOC]，只认#标识的标头</span><br></pre></td></tr></table></figure>
+<h5 id="12▸-自动生成目录"><a href="#12▸-自动生成目录" class="headerlink" title="12▸ 自动生成目录"></a>12▸ 自动生成目录</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">自动生成目录的代码为：[TOC]，只认#标识的标头</span><br></pre></td></tr></table></figure>
 <p>[TOC]</p>
 
       
